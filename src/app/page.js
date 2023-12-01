@@ -1,95 +1,58 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <div className="background"></div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      <div className="container">
+        <div className="header">
+          <h1>Elevate your brand with affordable and hand-crafted websites.</h1>
+          <p className="primary">
+            Ready to stand out? We're ready to help with a custom website to fit
+            your needs.
           </p>
-        </a>
+          <button className="btn btn-primary">Start here.</button>
+        </div>
+        <div className="philosophy">
+          <h2>Our philosophy</h2>
+          <p>
+            We believe that a website should be more than just a means to an
+            end. It should be a reflection of your brand and a way to connect
+            with your audience.
+          </p>
+        </div>
+        {/* Points on how we help */}
+
+        <ul className="points">
+          <li className="point">
+            <h3>Intuitive.</h3>
+            <p>
+              We design websites that help reflect your brand and connect with
+              your audience.
+            </p>
+          </li>
+          <li className="point">
+            <h3>Accessible.</h3>
+            <p>
+              We develop websites that are fast, responsive, and accessible to
+              all audiences. A website should be for everyone.
+            </p>
+          </li>
+          <li className="point">
+            <h3>Custom.</h3>
+            <p>
+              We build websites that are custom-tailored to your needs. No
+              templates here.
+            </p>
+          </li>
+          <li className="point">
+            <h3>Value-Oriented.</h3>
+            <p>
+              We try to get you the best value for the quality and work within
+              your budget.
+            </p>
+          </li>
+        </ul>
       </div>
-    </main>
-  )
+    </>
+  );
 }

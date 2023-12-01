@@ -14,19 +14,29 @@ export default function Nav() {
   const links = (
     <>
       <li>
-        <a href="/">Home</a>
+        <a className="nav-link" href="/">
+          Home
+        </a>
       </li>
       <li>
-        <a href="/portfolio">Portfolio</a>
+        <a className="nav-link" href="/portfolio">
+          Portfolio
+        </a>
       </li>
       <li>
-        <a href="/pricing">Pricing</a>
+        <a className="nav-link" href="/pricing">
+          Pricing
+        </a>
       </li>
       <li>
-        <a href="/faq">FAQ</a>
+        <a className="nav-link" href="/faq">
+          FAQ
+        </a>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <a className="nav-link" href="/contact">
+          Contact
+        </a>
       </li>
     </>
   );

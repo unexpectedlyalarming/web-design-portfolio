@@ -12,6 +12,8 @@
   --accent-light: #ff8c87;
   --accent-dark: #c63d3b;
 
+  --accent-secondary: lightblue;
+
   --font-primary: "Rubik Mono One", sans-serif;
   --font-secondary: "Inria Serif", serif;
 
@@ -98,6 +100,21 @@ button {
   border: none;
   outline: none;
   margin: none;
+}
+
+.point-icon {
+  width: 2rem;
+  height: auto;
+  color: var(--accent);
+}
+
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 /* Nav */

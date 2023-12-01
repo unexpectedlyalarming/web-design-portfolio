@@ -1,3 +1,6 @@
+import React from "react";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -27,28 +30,63 @@ export default function Home() {
 
         <ul className="points">
           <li className="point">
-            <h3>Intuitive.</h3>
+            <h3>
+              <Image
+                src="/img/lamp.png"
+                alt="Lightbulb"
+                width={100}
+                height={100}
+                className="point-icon"
+              />
+              Intuitive.
+            </h3>
             <p>
               We design websites that help reflect your brand and connect with
               your audience.
             </p>
           </li>
           <li className="point">
-            <h3>Accessible.</h3>
+            <h3>
+              <Image
+                src="/img/worldwide.png"
+                alt="Lightbulb"
+                width={100}
+                height={100}
+                className="point-icon"
+              />
+              Accessible.
+            </h3>
             <p>
               We develop websites that are fast, responsive, and accessible to
               all audiences. A website should be for everyone.
             </p>
           </li>
           <li className="point">
-            <h3>Custom.</h3>
+            <h3>
+              <Image
+                src="/img/puzzle-piece.png"
+                alt="Lightbulb"
+                width={100}
+                height={100}
+                className="point-icon"
+              />
+              Custom.
+            </h3>
             <p>
-              We build websites that are custom-tailored to your needs. No
-              templates here.
+              Our websites are custom-tailored to your needs. No templates here.
             </p>
           </li>
           <li className="point">
-            <h3>Value-Oriented.</h3>
+            <h3>
+              <Image
+                src="/img/price-tag.png"
+                alt="Lightbulb"
+                width={100}
+                height={100}
+                className="point-icon"
+              />
+              Value-Oriented.
+            </h3>
             <p>
               We try to get you the best value for the quality and work within
               your budget.

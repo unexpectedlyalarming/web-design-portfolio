@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
         <Footer />
+        <script async src="/js/scrollUtil.js"></script>
       </body>
     </html>
   );

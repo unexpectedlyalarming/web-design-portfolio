@@ -1,30 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  --primary: #f2f2f2;
+  --primary: #f5f0f6;
   --primary-darker: #e6e6e6;
   --secondary: #333;
-  --accent: #ffa700;
   --accent-light: #ff8c87;
   --accent-dark: #c63d3b;
+  --bg-dark: rgb(30, 10, 30);
+  /* --accent: #ffa700;
+  --complimentary: #0058ff; */
+  --accent: #affc41;
+  --accent-2: #fcab10;
+  --complimentary: #34e904;
 
   --accent-secondary: lightblue;
 
   --font-primary: "Rubik Mono One", sans-serif;
   --font-secondary: "Inria Serif", serif;
+  --font-tertiary: "Montserrat", sans-serif;
 
   --text-dark: #272727;
-  --text-light: #f2f2f2;
+  --text-light: #f5f0f6;
   --text-secondary: gray;
 }
 
 .root {
   width: 100%;
-  max-width: 1200px;
+
   min-height: 100vh;
   background-color: var(--primary);
   display: flex;
@@ -58,9 +65,16 @@ h6 {
   font-family: var(--font-primary);
 }
 
-a,
 button {
   font-family: var(--font-primary);
+}
+
+a {
+  color: var(--primary-lighter);
+  text-decoration: none;
+  font-family: var(--font-family-secondary);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 p,
@@ -102,10 +116,11 @@ button {
   margin: none;
 }
 
-.point-icon {
+img.point-icon {
   width: 2rem;
   height: auto;
-  color: var(--accent);
+
+  filter: brightness(0) invert(1);
 }
 
 h3 {
@@ -122,10 +137,12 @@ h3 {
 nav {
   height: 5rem;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 
   display: flex;
 
-  justify-content: space-between;
+  justify-content: start;
 
   align-items: center;
   padding: 0 1%;
@@ -138,6 +155,7 @@ nav ul {
   align-items: center;
   list-style: none;
   gap: 2rem;
+  max-width: 1200px;
 }
 nav ul li a {
   text-decoration: none;
@@ -186,7 +204,10 @@ nav ul li a {
     z-index: 2;
   }
 }
-
+nav a {
+  font-family: var(--font-primary);
+  font-weight: 200;
+}
 /* Footer */
 
 footer {
@@ -202,13 +223,24 @@ footer {
   align-items: center;
   padding: 0 1%;
   z-index: 1;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .footer-links a,
 footer p {
   text-decoration: none;
   color: var(--text-secondary);
   font-size: 1rem;
-  font-family: var(--font-secondary);
+  font-family: var(--font-tertiary);
+  font-weight: 700;
+
   transition: 0.2s;
 }
 .footer-links a:hover {
@@ -234,7 +266,19 @@ footer p {
 
   font-size: 1.2rem;
   font-weight: 400;
-  border: 2px solid var(--text-light);
+}
+
+/* 404 */
+
+.not-found {
+  width: 100%;
+  height: 100vh;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  align-items: center;
 }
 
 /* Background */
@@ -254,7 +298,7 @@ footer p {
   width: 40rem;
   height: 40rem;
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: var(--accent-2);
   pointer-events: none;
 
   filter: blur(50px);
@@ -295,24 +339,34 @@ footer p {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 0;
+  margin-top: 0;
+
+  margin: 0 auto;
 
   justify-items: center;
   align-items: center;
-  padding-top: 15rem;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 5rem;
+  grid-gap: 2rem;
+  height: 100%;
+}
+.home-container {
+  padding-top: 15rem;
 }
 
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: repeat(6, 1fr);
-    padding-top: 5rem;
     grid-gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 5rem;
   }
 }
 
@@ -357,6 +411,12 @@ footer p {
   justify-self: center;
   width: auto;
   text-decoration: none;
+  font-family: var(--font-primary);
+  background-color: black;
+  color: var(--text-light) !important;
+
+  text-transform: uppercase;
+  color: black;
 }
 
 /* Philosophy */
@@ -409,18 +469,21 @@ footer p {
     width: 80%;
   }
 }
-point {
+.point {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  /* border: 3px solid black; */
 }
 /* Process */
 
 .process {
-  padding-top: 5rem;
   grid-column-start: 1;
   grid-column-end: span 12;
   grid-row-start: 4;
@@ -428,6 +491,9 @@ point {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2rem;
+}
+.process-container {
+  padding-top: 0rem !important;
 }
 .process h2 {
   grid-column-start: 1;
@@ -437,6 +503,17 @@ point {
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
+}
+.philosophy h2,
+.process h2 {
+  font-family: var(--font-tertiary);
+  font-weight: 700;
+}
+
+.points h3,
+.process-item h3 {
+  font-family: var(--font-tertiary);
+  font-weight: 700;
 }
 .process p {
   grid-column-start: 2;
@@ -478,10 +555,34 @@ point {
   align-items: flex-start;
   flex-direction: column;
   text-align: center;
-  padding: 1rem;
-  background-color: var(--primary-darker);
+
   border-radius: 1rem;
   padding: 2rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  /* border: 3px solid black; */
+}
+.gradient-overlay {
+  grid-column-start: 1;
+  grid-column-end: span 12;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+
+  z-index: 1;
+  /* background: rgb(255, 167, 0);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 0, 1) 36%,
+    rgba(255, 140, 135, 1) 100%
+  ); */
+  background-color: var(--accent);
+  overflow: hidden;
+  overflow-y: hidden;
+  padding-bottom: 2rem;
 }
 .process-item p {
   text-align: left;
@@ -525,10 +626,13 @@ point {
   grid-row-start: 3;
 }
 .process-item h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
   @media (max-width: 1100px) {
     font-size: 1.2rem;
   }
+}
+.footer-home a,
+.footer-home p {
+  color: var(--bg-dark);
+  z-index: 2;
+  pointer-events: auto;
 }

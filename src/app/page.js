@@ -6,92 +6,98 @@ export default function Home() {
     <>
       <div className="background"></div>
 
-      <div className="container">
+      <div className="container home-container">
         <div className="header">
           <h1>Elevate your brand with affordable and hand-crafted websites.</h1>
           <p className="primary">
             Ready to stand out? We're ready to help with a custom website to fit
             your needs.
           </p>
-          <a className="btn btn-primary" href="#philosophy">
+          <a className="btn btn-primary " href="#philosophy">
             Start here.
           </a>
         </div>
+      </div>
+      <div className="gradient-overlay">
+        <div className="container past-header">
+          <div className="philosophy" id="philosophy">
+            <h2>Our philosophy</h2>
+            <p>
+              We believe that a website should be more than just a means to an
+              end. It should be a reflection of your brand and a way to connect
+              with your audience.
+            </p>
+          </div>
 
-        <div className="philosophy" id="philosophy">
-          <h2>Our philosophy</h2>
-          <p>
-            We believe that a website should be more than just a means to an
-            end. It should be a reflection of your brand and a way to connect
-            with your audience.
-          </p>
+          <ul className="points">
+            <li className="point">
+              <h3>
+                <Image
+                  src="/img/lamp.png"
+                  alt="Lightbulb"
+                  width={100}
+                  height={100}
+                  className="point-icon"
+                />
+                Intuitive.
+              </h3>
+              <p>
+                We design websites that help reflect your brand and connect with
+                your audience.
+              </p>
+            </li>
+            <li className="point">
+              <h3>
+                <Image
+                  src="/img/worldwide.png"
+                  alt="Lightbulb"
+                  width={100}
+                  height={100}
+                  className="point-icon"
+                />
+                Accessible.
+              </h3>
+              <p>
+                We develop websites that are fast, responsive, and accessible to
+                all audiences. A website should be for everyone.
+              </p>
+            </li>
+            <li className="point">
+              <h3>
+                <Image
+                  src="/img/puzzle-piece.png"
+                  alt="Lightbulb"
+                  width={100}
+                  height={100}
+                  className="point-icon"
+                />
+                Custom.
+              </h3>
+              <p>
+                Our websites are custom-tailored to your needs. No templates
+                here.
+              </p>
+            </li>
+            <li className="point">
+              <h3>
+                <Image
+                  src="/img/price-tag.png"
+                  alt="Lightbulb"
+                  width={100}
+                  height={100}
+                  className="point-icon"
+                />
+                Value-Oriented.
+              </h3>
+              <p>
+                We try to get you the best value for the quality and work within
+                your budget.
+              </p>
+            </li>
+          </ul>
         </div>
-
-        <ul className="points">
-          <li className="point">
-            <h3>
-              <Image
-                src="/img/lamp.png"
-                alt="Lightbulb"
-                width={100}
-                height={100}
-                className="point-icon"
-              />
-              Intuitive.
-            </h3>
-            <p>
-              We design websites that help reflect your brand and connect with
-              your audience.
-            </p>
-          </li>
-          <li className="point">
-            <h3>
-              <Image
-                src="/img/worldwide.png"
-                alt="Lightbulb"
-                width={100}
-                height={100}
-                className="point-icon"
-              />
-              Accessible.
-            </h3>
-            <p>
-              We develop websites that are fast, responsive, and accessible to
-              all audiences. A website should be for everyone.
-            </p>
-          </li>
-          <li className="point">
-            <h3>
-              <Image
-                src="/img/puzzle-piece.png"
-                alt="Lightbulb"
-                width={100}
-                height={100}
-                className="point-icon"
-              />
-              Custom.
-            </h3>
-            <p>
-              Our websites are custom-tailored to your needs. No templates here.
-            </p>
-          </li>
-          <li className="point">
-            <h3>
-              <Image
-                src="/img/price-tag.png"
-                alt="Lightbulb"
-                width={100}
-                height={100}
-                className="point-icon"
-              />
-              Value-Oriented.
-            </h3>
-            <p>
-              We try to get you the best value for the quality and work within
-              your budget.
-            </p>
-          </li>
-        </ul>
+      </div>
+      <div className="container process-container">
         <div className="process">
           <h2>Our process</h2>
           <p>
@@ -99,6 +105,7 @@ export default function Home() {
             Here's how we do it:
           </p>
         </div>
+
         <ul className="process-list">
           <li className="process-item item-1">
             <h3>1. Introduction</h3>
@@ -141,6 +148,19 @@ export default function Home() {
           </li>
         </ul>
       </div>
+
+      <footer className="footer-home">
+        <div className="footer-links">
+          <a href="/">Home</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/faq">FAQ</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <p>Company Name</p>
+
+        <p>© 2023</p>
+      </footer>
     </>
   );
 }

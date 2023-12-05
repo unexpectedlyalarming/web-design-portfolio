@@ -14,7 +14,7 @@ export default function Nav() {
   const links = (
     <>
       <li>
-        <a className="nav-link" href="/">
+        <a className="nav-link " href="/">
           Home
         </a>
       </li>

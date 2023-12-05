@@ -125,7 +125,7 @@ img.point-icon {
 
 h3 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
@@ -197,7 +197,7 @@ nav ul li a {
     display: block;
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--accent);
+    color: var(--bg-dark);
 
     background-color: transparent;
     cursor: pointer;
@@ -353,6 +353,14 @@ footer p {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2rem;
   height: 100%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .home-container {
   padding-top: 15rem;
@@ -493,7 +501,9 @@ footer p {
   grid-gap: 2rem;
 }
 .process-container {
-  padding-top: 0rem !important;
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+  }
 }
 .process h2 {
   grid-column-start: 1;
@@ -551,8 +561,8 @@ footer p {
 }
 .process-item {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
   text-align: center;
 
@@ -582,6 +592,7 @@ footer p {
   background-color: var(--accent);
   overflow: hidden;
   overflow-y: hidden;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .process-item p {

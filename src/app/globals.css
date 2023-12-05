@@ -165,7 +165,7 @@ nav ul li a {
 }
 
 .nav-link:hover {
-  color: var(--accent);
+  color: var(--accent-2);
   text-decoration: underline;
   text-decoration-thickness: 0.25rem;
 }
@@ -244,7 +244,7 @@ footer p {
   transition: 0.2s;
 }
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--accent-2);
   text-decoration: underline;
   text-decoration-thickness: 0.25rem;
 }

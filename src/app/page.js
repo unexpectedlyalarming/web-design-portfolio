@@ -18,9 +18,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="gradient-overlay">
+      <div className="gradient-overlay" id="philosophy">
         <div className="container past-header">
-          <div className="philosophy" id="philosophy">
+          <div className="philosophy">
             <h2>Our philosophy</h2>
             <p>
               We believe that a website should be more than just a means to an

@@ -138,18 +138,18 @@
   @media (max-width: 768px) {
     width: 100%;
 
-    background: rgb(255, 167, 0);
-    background: linear-gradient(
-      140deg,
-      rgba(255, 167, 0, 1) 0%,
-      var(--accent-2) 100%
-    );
+    background: rgb(200, 120, 0);
+    background: linear-gradient(140deg, rgba(220, 120, 0, 1) 0%, #62048f 100%);
   }
   @media (max-width: 1200px) {
     width: 100%;
   }
 }
-
+.card img {
+  width: 5rem;
+  height: auto;
+  object-fit: cover;
+}
 .card-2 {
   transform: scale(1.05);
   @media (max-width: 1200px) {
@@ -176,4 +176,27 @@ h4.pricing {
   text-align: center;
   padding-top: 2rem;
   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  p.description,
+  p.use-case,
+  .card h3,
+  .page-count,
+  p.note,
+  .card h4.pricing {
+    color: var(--primary) !important;
+  }
+  .card img {
+    filter: invert(1);
+  }
+  p.use-case,
+  p.description,
+  p.note {
+    font-weight: 500 !important;
+  }
+  .card .pricing,
+  .card h3 {
+    font-weight: 200 !important;
+  }
 }

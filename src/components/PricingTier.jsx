@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 export default function PricingTier() {
   const [type, setType] = useState("one-time");
@@ -13,6 +14,7 @@ export default function PricingTier() {
 
       <div className="cards">
         <div className="card card-1">
+          <Image src="/img/rocket.png" alt="Basic" width={100} height={100} />
           <h3>Basic</h3>
           <p className="description">
             Simple website with little/no interactive elements.
@@ -28,6 +30,12 @@ export default function PricingTier() {
           </p>
         </div>
         <div className="card card-2">
+          <Image
+            src="/img/settings.png"
+            alt="Standard"
+            width={100}
+            height={100}
+          />
           <h3>Standard</h3>
           <p className="description">Website with interactive elements.</p>
           <p className="use-case">
@@ -40,6 +48,7 @@ export default function PricingTier() {
           </p>
         </div>
         <div className="card card-3">
+          <Image src="/img/crown.png" alt="Premium" width={100} height={100} />
           <h3>Premium</h3>
           <p className="description">
             Fully custom application. For the most customized and interactive
@@ -65,6 +74,7 @@ export default function PricingTier() {
       </p>
       <div className="cards">
         <div className="card card-1">
+          <Image src="/img/rocket.png" alt="Basic" width={100} height={100} />
           <h3>Basic</h3>
           <p className="description">
             Simple website with little/no interactive elements.
@@ -77,6 +87,12 @@ export default function PricingTier() {
           <h4 className="pricing">Starting at $500</h4>
         </div>
         <div className="card card-2">
+          <Image
+            src="/img/settings.png"
+            alt="Standard"
+            width={100}
+            height={100}
+          />
           <h3>Standard</h3>
           <p className="description">Website with interactive elements.</p>
           <p className="use-case">
@@ -86,6 +102,8 @@ export default function PricingTier() {
           <h4 className="pricing">Starting at $1000</h4>
         </div>
         <div className="card card-3">
+          <Image src="/img/crown.png" alt="Premium" width={100} height={100} />
+
           <h3>Premium</h3>
           <p className="description">
             Fully custom application. For the most customized and interactive

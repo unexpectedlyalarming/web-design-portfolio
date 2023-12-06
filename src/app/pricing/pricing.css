@@ -1,0 +1,179 @@
+.pricing-container {
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.pricing-container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pricing-container .header h2 {
+}
+.pricing-container .header p {
+}
+
+.pricing-tiers {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.pricing-tiers h2 {
+  text-align: center;
+  grid-column: 1 / -1;
+}
+.pricing-controls {
+  grid-column: 1 / -1;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.pricing-controls .active {
+  background-color: var(--accent-2);
+  color: var(--white);
+  border: 3px solid var(--bg-dark);
+  opacity: 1;
+}
+.pricing-controls button {
+  background-color: var(--accent-2);
+  opacity: 0.7;
+}
+.one-time-description,
+.subscription-description {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  grid-column: 1 / -1;
+  background: rgb(255, 167, 0);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 0, 1) 0%,
+    var(--accent-2) 100%
+  );
+  padding: 5rem;
+  border-radius: 10px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0rem;
+    background: none;
+  }
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+}
+.card h3 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.card h4 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.page-count {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+.card .description {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.card .use-case {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+.card .note {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.card {
+  background-color: var(--primary-darker);
+
+  padding: 2rem;
+  border-radius: 10px;
+
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    background: rgb(255, 167, 0);
+    background: linear-gradient(
+      140deg,
+      rgba(255, 167, 0, 1) 0%,
+      var(--accent-2) 100%
+    );
+  }
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.card-2 {
+  transform: scale(1.05);
+  @media (max-width: 1200px) {
+    transform: scale(1);
+  }
+}
+.card-3 {
+}
+h4.pricing {
+}
+
+.pricing-notes {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.pricing-note {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+.pricing-contact {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}

@@ -14,9 +14,10 @@
   --bg-dark: rgb(30, 10, 30);
   /* --accent: #ffa700;
   --complimentary: #0058ff; */
-  --accent: #affc41;
-  --accent-2: #fcab10;
-  --complimentary: #34e904;
+  /* --accent: #affc41; */
+  --accent: #8ff104;
+  --accent-2: #8e41fc;
+  --complimentary: #8e41fc;
 
   --accent-secondary: lightblue;
 
@@ -125,7 +126,7 @@ img.point-icon {
 
 h3 {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
@@ -142,7 +143,7 @@ nav {
 
   display: flex;
 
-  justify-content: start;
+  justify-content: flex-start;
 
   align-items: center;
   padding: 0 1%;
@@ -276,7 +277,7 @@ footer p {
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 
   align-items: center;
 }
@@ -290,34 +291,48 @@ footer p {
   height: 100vh;
   overflow: hidden;
   z-index: -1;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 0, 1) 0%,
+    var(--accent-2) 50%
+  );
+  opacity: 0.7;
 }
 
 .background:before {
   content: "";
   position: absolute;
-  width: 40rem;
-  height: 40rem;
+  width: 200rem;
+  height: 200rem;
   border-radius: 50%;
   background-color: var(--accent-2);
+  background: rgb(255, 167, 0);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 167, 0, 1) 0%,
+    var(--accent-2) 50%
+  );
+
   pointer-events: none;
 
   filter: blur(50px);
   background-size: 200% 200%;
-  animation: moveCircles 20s ease-in-out infinite;
+  animation: moveCircles 20s ease-out infinite;
   z-index: -1;
 }
 
 @keyframes moveCircles {
   0% {
-    transform: translate(0%, 0%);
-  }
-  50% {
-    transform: translate(40%, 40%);
+    transform: translate(-20%, -20%);
     opacity: 0.7;
   }
+  50% {
+    transform: translate(30%, 30%);
+    opacity: 0.6;
+  }
   100% {
-    transform: translate(0%, 0%);
-    opacity: 1;
+    transform: translate(-20%, -20%);
+    opacity: 0.7;
   }
 }
 
@@ -420,7 +435,7 @@ footer p {
   width: auto;
   text-decoration: none;
   font-family: var(--font-primary);
-  background-color: black;
+  background-color: var(--accent-2);
   color: var(--text-light) !important;
 
   text-transform: uppercase;
@@ -479,7 +494,7 @@ footer p {
 }
 .point {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -561,14 +576,15 @@ footer p {
 }
 .process-item {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   text-align: center;
 
   border-radius: 1rem;
   padding: 2rem;
   background-color: var(--bg-dark);
+
   color: var(--text-light);
   /* border: 3px solid black; */
 }

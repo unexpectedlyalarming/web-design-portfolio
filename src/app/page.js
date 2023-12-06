@@ -42,8 +42,7 @@ export default function Home() {
                 Intuitive.
               </h3>
               <p>
-                We design websites that help reflect your brand and connect with
-                your audience.
+                We design websites that help your audience find what they need.
               </p>
             </li>
             <li className="point">
@@ -74,8 +73,8 @@ export default function Home() {
                 Custom.
               </h3>
               <p>
-                Our websites are custom-tailored to your needs. No templates
-                here.
+                Our websites are custom-tailored to your needs. We will work to
+                create a website that fits your own unique brand.
               </p>
             </li>
             <li className="point">

@@ -6,4 +6,10 @@
   padding-top: 2rem;
   height: 100vh;
   gap: 2rem;
+  @media (max-width: 768px) {
+    padding-top: 0rem;
+    margin-top: -3.5rem;
+  }
+  flex-wrap: wrap;
+  text-align: center;
 }
